@@ -21,7 +21,8 @@ nav {
    
 }
 img{
-    height: 175px;
+    height: 125px;
+    object-fit: contain;
    
 }
 
