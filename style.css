@@ -7,7 +7,7 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: 1rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -21,7 +21,7 @@ nav {
    
 }
 img{
-    height: 125px;
+    height: 100px;
    
 }
 
