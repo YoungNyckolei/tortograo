@@ -35,9 +35,9 @@ img{
 }
 
 .nav-links a {
-    color: rgb(168, 0, 0);
+    color: #371804;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 500;
     transition: color 0.3s ease;
     padding: 0.5 rem 0.5;
@@ -45,7 +45,7 @@ img{
 }
 
 .nav-links a:hover {
-    color: #3498db;
+    color: #009419;
 }
 
 .nav-links a::after {
