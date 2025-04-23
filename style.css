@@ -27,6 +27,7 @@ img {
 .nav-links {
     display: flex;
     list-style: none;
+    white-space: nowrap;
 }
 
 .nav-links li {
