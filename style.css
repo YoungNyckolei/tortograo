@@ -157,20 +157,21 @@ img {
 
 /* Estilo do link na banner igual aos nav-links */
 .banner a {
-    color: #371804;
+    color: #371804;  /* Cor do texto */
     text-decoration: none;
     font-size: 2rem;  /* Aumentando o tamanho do texto */
     font-weight: 500;
-    transition: color 0.3s ease, border-color 0.3s ease; /* Transição para a cor da borda */
-    padding: 0.7rem 1.5rem;  /* Aumentando o espaçamento para o link */
+    transition: color 0.3s ease, border-color 0.3s ease; /* Transição suave para a cor do texto e da borda */
+    padding: 0.7rem 1.5rem;  /* Aumentando o espaçamento do link */
     position: relative;
-    border: 2px solid #371804;  /* Borda do link */
+    background-color: #f6f6f6;  /* Cor de fundo do quadrado */
+    border: 2px solid #f6f6f6;  /* Borda com a mesma cor do fundo */
     border-radius: 5px;
 }
 
 .banner a:hover {
-    color: #009419;  /* Mudança da cor do texto */
-    border-color: #009419;  /* Mudança da cor da borda */
+    color: #009419;  /* Mudança de cor do texto ao passar o mouse */
+    border-color: #009419;  /* Mudança de cor da borda ao passar o mouse */
 }
 
 .banner a::after {
@@ -180,12 +181,12 @@ img {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #009419;
+    background-color: #009419;  /* Cor do efeito */
     transition: width 0.3s ease; /* Transição suave para o aumento da largura */
 }
 
 .banner a:hover::after {
-    width: 100%; /* Aumenta a largura do efeito para cobrir o link */
+    width: 110%; /* O efeito aumenta de largura para cobrir todo o link */
 }
 
 section {
