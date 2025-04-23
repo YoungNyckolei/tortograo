@@ -137,9 +137,52 @@ img {
 }
 
 .banner h1,
-.banner p {
+.banner p,
+.banner a {
     position: relative;
     z-index: 2;
+}
+
+.banner h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+/* Estilo do link na banner igual aos nav-links */
+.banner a {
+    color: #371804;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0.5rem;
+    position: relative;
+}
+
+.banner a:hover {
+    color: #009419;
+}
+
+.banner a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #009419;
+    transition: width 0.3s ease;
+}
+
+.banner a:hover::after {
+    width: 100%;
 }
 
 section {
