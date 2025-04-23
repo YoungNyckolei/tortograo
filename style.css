@@ -1,23 +1,20 @@
 header {
-    background-color: #f6f6f6; /* Mantendo o off-white que você preferiu */
+    background-color: #f6f6f6;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    height: 80px; /* Ajustei a altura do cabeçalho para não deixar as letras saírem do espaço */
-    display: flex;
-    justify-content: center; /* Centraliza o conteúdo do cabeçalho */
-    align-items: center;
-    padding: 0 2rem; /* Ajuste no padding para garantir que os links não saiam da área */
+    height: 100px;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    padding: 1rem 2rem;
     max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo {
-    color: #371804;
+    color: #f6f6f6;
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
@@ -30,8 +27,6 @@ img {
 .nav-links {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-links li {
@@ -41,17 +36,15 @@ img {
 .nav-links a {
     color: #371804;
     text-decoration: none;
-    font-size: 1.8rem; /* Tamanho ajustado */
+    font-size: 2rem;
     font-weight: 500;
-    transition: color 0.3s ease, transform 0.3s ease;
-    padding: 0.5rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0.5rem;
     position: relative;
-    display: inline-block; /* Garante que o link ocupe o espaço corretamente */
 }
 
 .nav-links a:hover {
     color: #009419;
-    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
 }
 
 .nav-links a::after {
@@ -79,7 +72,7 @@ img {
 .menu-toggle span {
     height: 3px;
     width: 25px;
-    background-color: white;
+    background-color: #ffffff;
     margin: 3px 0;
     transition: all 0.3s ease;
 }
@@ -91,7 +84,7 @@ img {
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);
-        background-color: #2c3e50;
+        background-color: #f6f6f6;
         flex-direction: column;
         align-items: center;
         padding: 2rem 0;
@@ -109,4 +102,69 @@ img {
     .menu-toggle {
         display: flex;
     }
+}
+
+/* Seções da homepage */
+.hero {
+    background-color: #f6f6f6;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #2d5014;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: #555;
+}
+
+section {
+    padding: 4rem 2rem;
+    background-color: #f6f6f6;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: #2d5014;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    color: #2d5014;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: #555;
+    font-size: 1rem;
+}
+
+footer {
+    background-color: #2d5014;
+    color: #ffffff;
+    padding: 2rem;
+    text-align: center;
 }
