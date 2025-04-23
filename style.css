@@ -113,7 +113,7 @@ img {
 }
 
 /* Seções da homepage */
-.hero {
+.banner {
     background-image: url('imgfundo.png');
     background-size: cover;
     background-position: center;
@@ -125,7 +125,7 @@ img {
     min-height: 400px;
 }
 
-.hero::before {
+.banner::before {
     content: "";
     position: absolute;
     top: 0;
@@ -136,8 +136,8 @@ img {
     z-index: 1;
 }
 
-.hero h1,
-.hero p {
+.banner h1,
+.banner p {
     position: relative;
     z-index: 2;
 }
