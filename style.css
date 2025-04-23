@@ -157,13 +157,15 @@ img {
 
 /* Estilo do link na banner igual aos nav-links */
 .banner a {
-    color: #2d5014;
+    color: #371804;
     text-decoration: none;
-    font-size: 1.6rem;
+    font-size: 2rem;  /* Aumentando o tamanho do texto */
     font-weight: 500;
     transition: color 0.3s ease;
-    padding: 0.5rem 0.5rem;
+    padding: 0.7rem 1.5rem;  /* Aumentando o espaçamento para o link */
     position: relative;
+    border: 2px solid #371804;  /* Adicionando uma borda para destacar mais */
+    border-radius: 5px;
 }
 
 .banner a:hover {
