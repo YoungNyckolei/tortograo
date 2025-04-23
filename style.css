@@ -186,7 +186,7 @@ img {
 }
 
 .banner a:hover::after {
-    width: 110%; /* O efeito aumenta de largura para cobrir todo o link */
+    width: 100%; /* O efeito aumenta de largura para cobrir todo o link */
 }
 
 section {
