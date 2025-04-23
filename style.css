@@ -161,15 +161,16 @@ img {
     text-decoration: none;
     font-size: 2rem;  /* Aumentando o tamanho do texto */
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, border-color 0.3s ease; /* Transição para a cor da borda */
     padding: 0.7rem 1.5rem;  /* Aumentando o espaçamento para o link */
     position: relative;
-    border: 2px solid #371804;  /* Adicionando uma borda para destacar mais */
+    border: 2px solid #371804;  /* Borda do link */
     border-radius: 5px;
 }
 
 .banner a:hover {
-    color: #009419;
+    color: #009419;  /* Mudança da cor do texto */
+    border-color: #009419;  /* Mudança da cor da borda */
 }
 
 .banner a::after {
@@ -180,11 +181,11 @@ img {
     width: 0;
     height: 2px;
     background-color: #009419;
-    transition: width 0.3s ease;
+    transition: width 0.3s ease; /* Transição suave para o aumento da largura */
 }
 
 .banner a:hover::after {
-    width: 100%;
+    width: 100%; /* Aumenta a largura do efeito para cobrir o link */
 }
 
 section {
