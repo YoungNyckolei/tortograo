@@ -114,20 +114,31 @@ img {
 
 /* Seções da homepage */
 .hero {
-    background-color: #f6f6f6;
-    padding: 4rem 2rem;
+    background-image: url('imgfundo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 6rem 2rem;
     text-align: center;
+    color: #ffffff;
+    position: relative;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    color: #2d5014;
-    margin-bottom: 1rem;
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
 
+.hero h1,
 .hero p {
-    font-size: 1.25rem;
-    color: #555;
+    position: relative;
+    z-index: 2;
 }
 
 section {
