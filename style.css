@@ -122,6 +122,7 @@ img {
     text-align: center;
     color: #ffffff;
     position: relative;
+    min-height: 400px;
 }
 
 .hero::before {
