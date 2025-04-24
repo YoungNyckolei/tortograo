@@ -16,6 +16,9 @@ async function atualizarPrecos() {
         const response = await fetch(url, options);
         const data = await response.json(); // Recebe a resposta da API como JSON
 
+        // Logando os dados para inspecionar a estrutura
+        console.log(data); // Isso ajudará a entender como os dados estão estruturados
+
         // Estrutura de mapeamento para os elementos do HTML
         const mapa = {
             trigo: 'preco-trigo',
@@ -26,13 +29,17 @@ async function atualizarPrecos() {
             cevada: 'preco-cevada'
         };
 
-        // Atualiza os preços com base nos dados da API
+        // Ajuste a lógica de busca de preços de acordo com a estrutura dos dados
         for (let produto in mapa) {
-            const preco = data.find(item => item.commodity.toLowerCase().includes(produto)); // Atualize conforme a estrutura da API
+            // Ajuste a busca de preço para a estrutura real dos dados
+            const preco = data.find(item => item.commodity && item.commodity.toLowerCase().includes(produto));
+            
             if (preco) {
+                // Acesse o preço e formate adequadamente
                 document.getElementById(mapa[produto]).textContent = `R$ ${parseFloat(preco.price).toFixed(2)}`; // Formatação de preço
             } else {
-                document.getElementById(mapa[produto]).textContent = 'N/D'; // Caso não encontre o produto
+                // Caso não encontre o produto, exiba 'N/D'
+                document.getElementById(mapa[produto]).textContent = 'N/D'; 
             }
         }
 
