@@ -290,7 +290,7 @@ section h2 {
 }
 
 .preco-item h4 {
-    font-size: 1rem;
+    font-size: 0.5rem;
     font-weight: 600;  /* Mantendo um peso de fonte mais forte, igual ao h3 */
     color: #2d5014;    /* Cor da fonte, igual ao estilo dos outros títulos */
 }
