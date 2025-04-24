@@ -137,9 +137,57 @@ img {
 }
 
 .banner h1,
-.banner p {
+.banner p,
+.banner a {
     position: relative;
     z-index: 2;
+}
+
+.banner h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+/* Estilo do link na banner igual aos nav-links */
+.banner a {
+    color: #371804;  /* Cor do texto */
+    text-decoration: none;
+    font-size: 2rem;  /* Aumentando o tamanho do texto */
+    font-weight: 500;
+    transition: color 0.3s ease, border-color 0.3s ease; /* Transição suave para a cor do texto e da borda */
+    padding: 0.7rem 1.5rem;  /* Aumentando o espaçamento do link */
+    position: relative;
+    background-color: #f6f6f6;  /* Cor de fundo do quadrado */
+    border: 2px solid #f6f6f6;  /* Borda com a mesma cor do fundo */
+    border-radius: 5px;
+}
+
+.banner a:hover {
+    color: #009419;  /* Mudança de cor do texto ao passar o mouse */
+    border-color: #009419;  /* Mudança de cor da borda ao passar o mouse */
+}
+
+.banner a::after {
+    display: none;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #009419;  /* Cor do efeito */
+    transition: width 0.3s ease; /* Transição suave para o aumento da largura */
+}
+
+.banner a:hover::after {
+    width: 100%; /* O efeito aumenta de largura para cobrir todo o link */
 }
 
 section {
@@ -162,87 +210,71 @@ section h2 {
     margin: 0 auto;
 }
 
-/* Card Comum */
 .card {
     background-color: #ffffff;
     border: 1px solid #ddd;
     padding: 2rem;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Garantir que a imagem fique dentro do card com bordas arredondadas */
+    background-image: url('associados.jpg');
+    background-size: cover; /* Faz a imagem cobrir todo o card */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Aplica um fundo semitransparente para dar o efeito opaco */
+    border-radius: 8px; /* Mantém o arredondamento das bordas */
+    z-index: 1;
+}
+
+.card h3, .card p, .card a {
+    position: relative;
+    z-index: 2; /* Garante que o texto e o link fiquem acima da imagem */
 }
 
 .card h3 {
-    color: #2d5014;
+    color: #ffffff;
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
 .card p {
-    color: #555;
+    color: #ffffff;
     font-size: 1rem;
 }
 
 .card a {
-    color: #371804;
+    color: #009419;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    position: relative;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .card a:hover {
-    color: #009419;
+    color: #371804;
 }
 
-.card a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #009419;
-    transition: width 0.3s ease;
+
+/* Adicionando o efeito de hover para o card inteiro */
+.card:hover {
+    transform: translateY(-10px);  /* Eleva o card ao passar o mouse */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);  /* Aumenta a sombra para destacar */
 }
 
-.card a:hover::after {
-    width: 100%;
-}
-
-/* Card Cooperados com imagem */
-.card.associados {
-    background-image: url('associados.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 2rem;
-    color: white;
-    position: relative;
-    height: 300px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.card.associados::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-}
-
-.card.associados h3, .card.associados p {
-    position: relative;
-    z-index: 2;
-}
 
 footer {
-    background-color: #
+    background-color: #2d5014;
+    color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+}
