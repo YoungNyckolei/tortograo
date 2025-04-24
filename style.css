@@ -242,16 +242,49 @@ section h2 {
 }
 
 .card.cotacoes {
-    background: rgba(0, 0, 0, 0.4);
-    background-image: none;
-    text-align: center;
+    background-image: url('cotacao.jpg'); /* ou a imagem que desejar */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.card.cotacoes h3,
-.card.cotacoes ul,
-.card.cotacoes p {
+.card.cotacoes h3 {
+    font-size: 1.8rem;
     color: #f6f6f6;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px 2px #000;
+    margin-bottom: 1rem;
+}
+
+.precos-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.preco-item {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    width: 100px;
+    height: 100px;
+    color: #f6f6f6;
+    text-align: center;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.preco-item:hover {
+    transform: scale(1.05);
 }
 
 .cotacoes-lista {
