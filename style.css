@@ -269,10 +269,7 @@ section h2 {
 }
 
 /* Estilo de texto */
-.card h3 {
-    text-shadow: 1px 1px 2px #000000; /* sombra leve para destacar */
-    -webkit-text-stroke: 0.5px #000000; /* borda fina preta */
-}
+.card h3,
 .card p {
     position: relative;
     z-index: 2;
