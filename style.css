@@ -269,12 +269,17 @@ section h2 {
 }
 
 /* Estilo de texto */
-.card h3,
+.card h3 {
+    text-shadow: 1px 1px 2px #000000; /* sombra leve para destacar */
+    -webkit-text-stroke: 0.5px #000000; /* borda fina preta */
+}
 .card p {
     position: relative;
     z-index: 2;
     color: #f6f6f6; /* Cor do texto */
     margin: 0.5rem 0;
+    text-shadow: 1px 1px 2px #000000; /* sombra leve para destacar */
+    -webkit-text-stroke: 0.5px #000000; /* borda fina preta */
 }
 
 /* Link no card */
@@ -287,6 +292,8 @@ section h2 {
     font-weight: 500;
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
+    text-shadow: 1px 1px 2px #000000; /* sombra leve para destacar */
+    -webkit-text-stroke: 0.5px #000000; /* borda fina preta */
 }
 
 .card a:hover {
