@@ -36,3 +36,6 @@ function atualizarPrecos() {
 
 // Executa a função ao carregar a página
 document.addEventListener('DOMContentLoaded', atualizarPrecos);
+
+// Atualiza os preços a cada 10 segundos
+setInterval(atualizarPrecos, 10000);
