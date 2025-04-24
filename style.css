@@ -272,7 +272,6 @@ section h2 {
 }
 
 .preco-item {
-    font-size: 1rem;
     background-color: rgba(255, 255, 255, 0.8); /* Ajuste para mais opacidade */
     border: 1px solid rgba(255, 255, 255, 0.5); /* Melhoria no contraste */
     border-radius: 12px;
@@ -288,6 +287,12 @@ section h2 {
     backdrop-filter: none; /* Removendo o desfoque */
     box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Ajuste da sombra */
     transition: transform 0.3s ease;
+}
+
+.preco-item h4 {
+    font-size: 2.5rem; /* Mesmo tamanho dos h3 dos outros cards */
+    font-weight: 600;  /* Mantendo um peso de fonte mais forte, igual ao h3 */
+    color: #f6f6f6;    /* Cor da fonte, igual ao estilo dos outros títulos */
 }
 
 .preco-item:hover {
