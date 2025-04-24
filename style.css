@@ -210,65 +210,97 @@ section h2 {
     margin: 0 auto;
 }
 
+/* Card comum - estilo básico */
 .card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    padding: 2rem;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    position: relative;
-    overflow: hidden; /* Garantir que a imagem fique dentro do card com bordas arredondadas */
-    background-image: url('associados.jpg');
-    background-size: cover; /* Faz a imagem cobrir todo o card */
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #ffffff; /* Cor de fundo básica */
+    border: 1px solid #ddd;    /* Borda fina */
+    padding: 2rem;             /* Espaçamento interno */
+    border-radius: 8px;        /* Bordas arredondadas */
+    text-align: center;        /* Alinhamento do texto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    position: relative;        /* Necessário para o efeito da imagem de fundo */
+    overflow: hidden;          /* Garantir que a imagem não saia dos limites do card */
+    height: 300px;             /* Altura definida para todos os cards */
 }
 
+/* Card Produtos - imagem de fundo específica */
+.card.produtos {
+    background-image: url('produtos.jpg'); /* Define a imagem de fundo para o card Produtos */
+    background-size: cover;       /* A imagem cobre todo o card */
+    background-position: center;   /* Centraliza a imagem */
+    background-repeat: no-repeat;  /* Impede que a imagem se repita */
+}
+
+/* Card Serviços - imagem de fundo específica */
+.card.servicos {
+    background-image: url('servicos.jpg'); /* Define a imagem de fundo para o card Serviços */
+    background-size: cover;       /* A imagem cobre todo o card */
+    background-position: center;   /* Centraliza a imagem */
+    background-repeat: no-repeat;  /* Impede que a imagem se repita */
+}
+
+/* Card Cooperados - imagem de fundo específica */
+.card.associados {
+    background-image: url('associados.jpg'); /* Define a imagem de fundo para o card Cooperados */
+    background-size: cover;       /* A imagem cobre todo o card */
+    background-position: center;   /* Centraliza a imagem */
+    background-repeat: no-repeat;  /* Impede que a imagem se repita */
+}
+
+/* Camada de opacidade para os cards */
 .card::before {
-    content: "";
-    position: absolute;
+    content: "";                  /* Sem conteúdo, apenas uma camada */
+    position: absolute;           /* Posicionamento absoluto */
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Aplica um fundo semitransparente para dar o efeito opaco */
-    border-radius: 8px; /* Mantém o arredondamento das bordas */
-    z-index: 1;
+    width: 100%;                  /* Preenche toda a área do card */
+    height: 100%;                 /* Preenche toda a altura do card */
+    background: rgba(0, 0, 0, 0.3); /* Cor preta com 30% de opacidade */
+    border-radius: 8px;           /* Arredondamento das bordas da camada */
+    z-index: 1;                   /* Coloca atrás do conteúdo */
 }
 
-.card h3, .card p, .card a {
-    position: relative;
-    z-index: 2; /* Garante que o texto e o link fiquem acima da imagem */
+/* Garantir que o conteúdo do card fique acima da camada de opacidade */
+.card h3, .card p {
+    position: relative;           /* Coloca o texto acima da camada de opacidade */
+    z-index: 2;                   /* Z-index maior que a camada de opacidade */
 }
 
-.card h3 {
-    color: #ffffff;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.card p {
-    color: #ffffff;
-    font-size: 1rem;
-}
-
+/* Links nos cards */
 .card a {
-    color: #009419;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    color: #371804;               /* Cor do texto do link */
+    text-decoration: none;        /* Remove o sublinhado */
+    font-size: 1.2rem;            /* Tamanho da fonte */
+    font-weight: 500;             /* Peso da fonte */
+    padding: 0.5rem 1rem;         /* Espaçamento interno do link */
+    position: relative;           /* Necessário para o efeito de linha embaixo */
+    transition: color 0.3s ease;   /* Transição suave de cor */
 }
 
 .card a:hover {
-    color: #371804;
+    color: #009419;               /* Cor do link quando hover */
 }
 
+.card a::after {
+    content: '';                  /* Linha adicional após o link */
+    position: absolute;           /* Posicionamento absoluto */
+    bottom: 0;
+    left: 0;
+    width: 0;                     /* Começa com largura 0 */
+    height: 2px;                  /* Tamanho da linha */
+    background-color: #009419;    /* Cor da linha */
+    transition: width 0.3s ease;   /* Transição suave da largura */
+}
 
-/* Adicionando o efeito de hover para o card inteiro */
-.card:hover {
-    transform: translateY(-10px);  /* Eleva o card ao passar o mouse */
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);  /* Aumenta a sombra para destacar */
+.card a:hover::after {
+    width: 100%;                  /* Linha se expande ao passar o mouse */
+}
+
+/* Responsividade - para telas menores */
+@media (max-width: 768px) {
+    .card {
+        height: auto; /* Deixa a altura do card ajustável em telas pequenas */
+    }
 }
 
 
