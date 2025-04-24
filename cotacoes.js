@@ -1,12 +1,12 @@
-// URL do endpoint da API
-const url = 'https://agro-business-api.playground/apiendpoint_73dcd2cb-7e79-475e-a06c-d4f38160cad6'; 
+// URL do endpoint da API para o trigo
+const url = 'https://agro-business-api.p.rapidapi.com/wheat'; 
 
 // Definindo as opções para a requisição
 const options = {
     method: 'GET',
     headers: {
         'X-RapidAPI-Key': '63af5e3afemsh1b446ff284b2421p179fe4jsnc43ed4405e4d', // Substitua pela sua chave API
-        'X-RapidAPI-Host': 'agro-business-api.playground' // O host da API
+        'X-RapidAPI-Host': 'agro-business-api.p.rapidapi.com' // O host da API
     }
 };
 
@@ -16,31 +16,21 @@ async function atualizarPrecos() {
         const response = await fetch(url, options);
         const data = await response.json(); // Recebe a resposta da API como JSON
 
-        // Logando os dados para inspecionar a estrutura
-        console.log(data); // Isso ajudará a entender como os dados estão estruturados
-
         // Estrutura de mapeamento para os elementos do HTML
         const mapa = {
             trigo: 'preco-trigo',
-            soja: 'preco-soja',
+            soja: 'preco-soja', // Você precisará de outra URL para a soja, milho, etc.
             milho: 'preco-milho',
             feijao: 'preco-feijao',
             arroz: 'preco-arroz',
             cevada: 'preco-cevada'
         };
 
-        // Ajuste a lógica de busca de preços de acordo com a estrutura dos dados
-        for (let produto in mapa) {
-            // Ajuste a busca de preço para a estrutura real dos dados
-            const preco = data.find(item => item.commodity && item.commodity.toLowerCase().includes(produto));
-            
-            if (preco) {
-                // Acesse o preço e formate adequadamente
-                document.getElementById(mapa[produto]).textContent = `R$ ${parseFloat(preco.price).toFixed(2)}`; // Formatação de preço
-            } else {
-                // Caso não encontre o produto, exiba 'N/D'
-                document.getElementById(mapa[produto]).textContent = 'N/D'; 
-            }
+        // Atualiza os preços com base nos dados da API
+        if (data && data.price) {
+            document.getElementById(mapa.trigo).textContent = `R$ ${parseFloat(data.price).toFixed(2)}`;
+        } else {
+            document.getElementById(mapa.trigo).textContent = 'N/D';
         }
 
     } catch (error) {
