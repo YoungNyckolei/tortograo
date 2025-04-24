@@ -212,15 +212,22 @@ section h2 {
 
 /* Card comum - estilo básico */
 .card {
-    background-color: #ffffff; /* Cor de fundo básica */
-    border: 1px solid #ddd;    /* Borda fina */
-    padding: 2rem;             /* Espaçamento interno */
-    border-radius: 8px;        /* Bordas arredondadas */
-    text-align: center;        /* Alinhamento do texto */
+    background-color: #ffffff;  /* Cor de fundo básica */
+    border: 1px solid #ddd;     /* Borda fina */
+    padding: 2rem;              /* Espaçamento interno */
+    border-radius: 8px;         /* Bordas arredondadas */
+    text-align: center;         /* Alinhamento do texto */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra suave */
-    position: relative;        /* Necessário para o efeito da imagem de fundo */
-    overflow: hidden;          /* Garantir que a imagem não saia dos limites do card */
-    height: 300px;             /* Altura definida para todos os cards */
+    position: relative;         /* Necessário para o efeito da imagem de fundo */
+    overflow: hidden;           /* Garantir que a imagem não saia dos limites do card */
+    height: 300px;              /* Altura definida para todos os cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adicionando transições para o hover */
+}
+
+/* Efeito de Hover para os Cards */
+.card:hover {
+    transform: translateY(-5px);  /* Eleva o card levemente */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra mais forte ao passar o mouse */
 }
 
 /* Card Produtos - imagem de fundo específica */
@@ -302,6 +309,7 @@ section h2 {
         height: auto; /* Deixa a altura do card ajustável em telas pequenas */
     }
 }
+
 
 
 footer {
