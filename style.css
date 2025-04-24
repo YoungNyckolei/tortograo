@@ -391,86 +391,9 @@ section h2 {
     }
 }
 
-/* Para os valores das cotações */
-.card .cotacao-box {
-    background-color: rgba(255, 255, 255, 0.8); /* Caixa mais opaca */
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #371804;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    text-shadow: 1px 1px 2px #000000; /* Sombra para destacar */
-    -webkit-text-stroke: 0.5px #000000; /* Borda fina preta nas letras */
-}
-
-/* Para os nomes dos insumos (trigo, soja, milho) */
-.card .cotacao-box .insumo-nome {
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: #2d5014; /* Cor de destaque */
-    text-transform: uppercase; /* Maiúsculas */
-    margin-bottom: 0.5rem;
-}
-
-/* Evite aplicar o efeito de borda e sombra nos preços */
-.card .cotacao-box .preco {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #009419; /* Cor verde para o preço */
-}
-
-
-
 footer {
     background-color: #2d5014;
     color: #ffffff;
     padding: 2rem;
     text-align: center;
-}
-
-/* Container das cotações */
-.precos-container {
-    display: flex;
-    gap: 1rem;
-    justify-content: center; /* Centraliza as caixas na horizontal */
-    align-items: center; /* Centraliza as caixas na vertical */
-    flex-wrap: wrap; /* Permite que as caixas se ajustem em várias linhas em telas menores */
-    height: 100%;
-}
-
-/* Ajuste das caixas de cotações */
-.preco-item {
-    background-color: rgba(255, 255, 255, 0.8); /* Caixa mais opaca */
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #371804;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    text-shadow: 1px 1px 2px #000000; /* Sombra para destacar */
-    -webkit-text-stroke: 0.5px #000000; /* Borda fina preta nas letras */
-    width: 150px; /* Definir um tamanho fixo para as caixas */
-    height: 150px; /* Definir um tamanho fixo para as caixas */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(3px);
-    transition: transform 0.3s ease;
-}
-
-.preco-item:hover {
-    transform: scale(1.05); /* Efeito de zoom no hover */
-}
-
-/* Para o título "Cotações do Dia" */
-.card.cotacoes h3 {
-    font-size: 1.8rem;
-    color: #2d5014; /* Cor igual aos outros títulos */
-    margin-top: 0;
-    margin-bottom: 1.5rem;
 }
