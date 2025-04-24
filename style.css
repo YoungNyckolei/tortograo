@@ -241,12 +241,36 @@ section h2 {
     background-repeat: no-repeat;
 }
 
-.card.servicos {
-    background-image: url('servicos.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.card.cotacoes {
+    background: rgba(0, 0, 0, 0.4);
+    background-image: none;
+    text-align: center;
 }
+
+.card.cotacoes h3,
+.card.cotacoes ul,
+.card.cotacoes p {
+    color: #f6f6f6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.cotacoes-lista {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    font-size: 1.3rem;
+}
+
+.cotacoes-lista li {
+    margin: 0.5rem 0;
+}
+
+.cotacoes-fonte {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 1rem;
+}
+
 
 .card.associados {
     background-image: url('associados.jpg');
