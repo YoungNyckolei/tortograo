@@ -442,7 +442,7 @@ section h2 {
 .card.noticias h3 {
     font-size: 2rem; /* Diminuímos o tamanho da fonte */
     color: #f6f6f6;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     padding-top: 1.5rem;
 }
 
