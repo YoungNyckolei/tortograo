@@ -9,9 +9,7 @@ function obterDadosSimulados() {
         trigo: gerarPrecoAleatorio(70, 90),
         soja: gerarPrecoAleatorio(130, 160),
         milho: gerarPrecoAleatorio(60, 80),
-        feijao: gerarPrecoAleatorio(85, 100),
-        arroz: gerarPrecoAleatorio(50, 65),
-        cevada: gerarPrecoAleatorio(65, 75)
+        feijao: gerarPrecoAleatorio(85, 100)
     };
 }
 
@@ -24,8 +22,6 @@ function atualizarPrecos() {
         soja: 'preco-soja',
         milho: 'preco-milho',
         feijao: 'preco-feijao',
-        arroz: 'preco-arroz',
-        cevada: 'preco-cevada'
     };
 
     for (let produto in mapa) {
