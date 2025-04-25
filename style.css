@@ -514,9 +514,11 @@ section h2 {
   }
   
   .noticia-item a {
-    color: #1a73e8;
-    font-size: 14px;
-  }
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+}
 
   .noticia-item h4,
   .noticia-item p {
