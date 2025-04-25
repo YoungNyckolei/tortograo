@@ -487,8 +487,8 @@ section h2 {
     transition: background-color 0.3s ease, color 0.3s ease;
     
     /* Correções importantes */
-    pointer-events: auto;
-    cursor: pointer;
+    pointer-events: none;
+    cursor: default;
     z-index: 3;
     position: relative;
 }
