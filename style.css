@@ -423,6 +423,49 @@ section h2 {
     width: fit-content;
 }
 
+.card.noticias {
+    background-color: #f1f1f1; /* Cor de fundo mais clara, diferente do card de produtos */
+    color: #333; /* Cor de texto mais escura */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card.noticias h3 {
+    font-size: 2.5rem;
+    color: #009419; /* Cor verde para manter o visual mais relacionado ao setor agrícola */
+    margin: 1rem 0;
+}
+
+.card.noticias p {
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+    color: #555; /* Cor do texto explicativo */
+}
+
+.card.noticias a {
+    font-size: 1.6rem;
+    color: #009419;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    background-color: #f6f6f6;
+    border: 2px solid #009419;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.card.noticias a:hover {
+    background-color: #009419;
+    color: #fff;
+}
+
 footer {
     background-color: #2d5014;
     color: #ffffff;
