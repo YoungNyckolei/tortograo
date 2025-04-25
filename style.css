@@ -495,6 +495,28 @@ section h2 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+.card.noticias .noticias-container {
+    display: grid;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .noticia-item {
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+  
+  .noticia-item h4 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  
+  .noticia-item a {
+    color: #1a73e8;
+    font-size: 14px;
+  }
 
 footer {
     background-color: #2d5014;
