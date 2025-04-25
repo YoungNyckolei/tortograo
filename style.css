@@ -518,6 +518,45 @@ section h2 {
     font-size: 14px;
   }
 
+  /* Para os botões "Saiba Mais" e "Leia Mais" */
+a.btn-destaque,
+a.btn-mais-valores,
+a:hover {
+    text-decoration: none;
+    color: inherit; /* Garante que a cor do texto não mude ao passar o mouse */
+    transition: all 0.3s ease; /* Suaviza a transição de hover */
+}
+
+/* Adiciona hover para os botões */
+a.btn-destaque:hover,
+a.btn-mais-valores:hover {
+    background-color: #4CAF50; /* Cor de fundo para hover */
+    color: white; /* Cor do texto ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento de tamanho */
+}
+
+/* Ajustes nos títulos e texto das notícias */
+.noticia-item h4, .noticia-item p {
+    transition: all 0.3s ease; /* Suaviza a transição */
+}
+
+/* Ajuste no hover das notícias */
+.noticia-item:hover h4,
+.noticia-item:hover p {
+    color: #4CAF50; /* Cor do texto ao passar o mouse */
+    transform: scale(1.02); /* Leve aumento de tamanho */
+}
+
+.noticia-item {
+    transition: all 0.3s ease;
+}
+
+/* Hover nas caixas de notícia */
+.noticia-item:hover {
+    background-color: #f4f4f4; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.02); /* Leve aumento de tamanho das caixas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
 footer {
     background-color: #2d5014;
     color: #ffffff;
