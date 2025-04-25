@@ -285,6 +285,10 @@ section h2 {
     width: 100%;
 }
 
+.precos-container p {
+    cursor: default;
+}
+
 .preco-item {
     background-color: rgba(255, 255, 255, 0.8); /* Ajuste para mais opacidade */
     border: 1px solid rgba(255, 255, 255, 0.5); /* Melhoria no contraste */
