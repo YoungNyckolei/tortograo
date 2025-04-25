@@ -433,6 +433,9 @@ section h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url('caminho/da/imagem.jpg'); /* Aqui você coloca o caminho da imagem */
+    background-size: cover; /* Faz a imagem cobrir todo o espaço do card */
+    background-position: center center; /* Centraliza a imagem */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
