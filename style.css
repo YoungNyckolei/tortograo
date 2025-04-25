@@ -417,6 +417,12 @@ section h2 {
     text-shadow: 1px 1px 2px #000000;
 }
 
+.mais-valores-link {
+    display: block;
+    margin: 2rem auto 1rem auto;
+    width: fit-content;
+}
+
 footer {
     background-color: #2d5014;
     color: #ffffff;
