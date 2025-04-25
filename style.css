@@ -433,9 +433,9 @@ section h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('noticias.jpg'); /* Aqui você coloca o caminho da imagem */
-    background-size: cover; /* Faz a imagem cobrir todo o espaço do card */
-    background-position: center center; /* Centraliza a imagem */
+    background-image: url('noticias.jpg'); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -472,67 +472,12 @@ section h2 {
 .noticia-item p {
     font-size: 1.2rem;
     color: #555;
-    margin-bottom: 1.5rem;
 }
-
-.noticia-item a {
-    display: inline-block;
-    font-size: 1.4rem;
-    color: #009419;
-    text-decoration: none;
-    padding: 0.7rem 1.5rem;
-    background-color: #f6f6f6;
-    border: 2px solid #009419;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    
-    /* Correções importantes */
-    pointer-events: none;
-    cursor: default;
-    z-index: 3;
-    position: relative;
-}
-
-.noticia-item a:hover {
-    background-color: #009419;
-    color: #fff;
-}
-
 
 .noticia-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
-
-.card.noticias .noticias-container {
-    display: grid;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .noticia-item {
-    background: #fff;
-    border-radius: 6px;
-    padding: 10px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  }
-  
-  .noticia-item h4 {
-    font-size: 16px;
-    margin-bottom: 6px;
-  }
-  
-  .noticia-item a {
-    pointer-events: auto;
-    cursor: pointer;
-    z-index: 3;
-    position: relative;
-}
-
-  .noticia-item h4,
-  .noticia-item p {
-      pointer-events: none;
-  }
 
 footer {
     background-color: #2d5014;
