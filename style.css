@@ -439,12 +439,14 @@ section h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 100%; /* Para garantir que o card não ultrapasse a largura */
     box-sizing: border-box;
+    overflow: hidden; /* Garantir que nenhum conteúdo ultrapasse as bordas */
 }
 
 .card.noticias h3 {
     font-size: 2.5rem;
     color: #f6f6f6;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem; /* Ajuste para dar mais espaço abaixo do título */
+    padding-top: 1.5rem; /* Adicionado padding para afastar o título da borda do card */
 }
 
 .noticias-container {
@@ -465,6 +467,8 @@ section h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden; /* Garante que nada saia das bordas */
+    max-width: 100%; /* Garante que a caixa não ultrapasse o card */
+    box-sizing: border-box;
 }
 
 .noticia-item img {
@@ -521,6 +525,7 @@ section h2 {
         grid-template-columns: 1fr; /* Para telas menores, mostrar uma coluna */
     }
 }
+
 
 
 footer {
