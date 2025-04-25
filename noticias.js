@@ -1,7 +1,8 @@
 async function carregarNoticias() {
     const container = document.querySelector('.noticias-container');
-    const apiKey = 'SUA_API_KEY_AQUI'; // substitua pela sua chave da NewsAPI
-    const url = `https://newsapi.org/v2/top-headlines?country=br&pageSize=3&apiKey=${apiKey}`;
+    const apiKey = 'e03cb832c93743b797a3ed8df3a5db94'; // substitua pela sua chave da NewsAPI
+    const url = `https://newsapi.org/v2/top-headlines?country=br&category=agriculture&pageSize=3&apiKey=${apiKey}`;
+
   
     try {
       const resposta = await fetch(url);
@@ -29,3 +30,9 @@ async function carregarNoticias() {
   
   carregarNoticias();
   
+  box.innerHTML = `
+  ${noticia.urlToImage ? `<img src="${noticia.urlToImage}" alt="Imagem da notícia" />` : ''}
+  <h4>${noticia.title}</h4>
+  <p>${noticia.description || ''}</p>
+  <a href="${noticia.url}" target="_blank">Leia mais</a>
+`;
