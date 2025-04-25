@@ -1,26 +1,34 @@
 async function carregarNoticias() {
     const container = document.querySelector('.noticias-container');
-    const apiKey = 'e03cb832c93743b797a3ed8df3a5db94'; // Substitua pela sua chave da NewsAPI
-    const url = `https://newsapi.org/v2/everything?q=agronegócio&language=pt&pageSize=3&sortBy=publishedAt&apiKey=${apiKey}`;
+  
+    // Criando um conjunto de notícias fictícias
+    const noticiasFicticias = [
+      {
+        title: 'A TortoGrão lança novo produto agrícola inovador',
+        description: 'A cooperativa TortoGrão acaba de lançar um novo produto que promete revolucionar o mercado agrícola...',
+        url: 'https://www.tortograo.com.br/noticias/produto-inovador',
+        urlToImage: 'https://via.placeholder.com/600x400?text=Imagem+1' // Imagem fictícia
+      },
+      {
+        title: 'Copa Torto 2025: Participação recorde de equipes!',
+        description: 'A Copa Torto, um dos maiores eventos de esportes da região, teve uma participação recorde de equipes este ano...',
+        url: 'https://www.tortograo.com.br/noticias/copa-torto-2025',
+        urlToImage: 'https://via.placeholder.com/600x400?text=Imagem+2' // Imagem fictícia
+      },
+      {
+        title: 'Inovação no campo: Tecnologia e sustentabilidade se encontram na TortoGrão',
+        description: 'A TortoGrão investe cada vez mais em tecnologias sustentáveis para garantir um futuro melhor para o campo...',
+        url: 'https://www.tortograo.com.br/noticias/inovacao-tecnologia-sustentabilidade',
+        urlToImage: 'https://via.placeholder.com/600x400?text=Imagem+3' // Imagem fictícia
+      }
+    ];
   
     try {
-      const resposta = await fetch(url);
-      const dados = await resposta.json();
+      // Limpa o conteúdo anterior
+      container.innerHTML = '';
   
-      // Verifica se a API retornou erro
-      if (resposta.status !== 200 || dados.status !== 'ok') {
-        throw new Error(`Erro da API: ${dados.message || 'Falha ao carregar dados.'}`);
-      }
-  
-      // Caso não haja artigos, exibe mensagem
-      if (!dados.articles || dados.articles.length === 0) {
-        container.innerHTML = '<p>Não há notícias disponíveis no momento.</p>';
-        return;
-      }
-  
-      container.innerHTML = ''; // Limpa o conteúdo anterior
-  
-      dados.articles.forEach(noticia => {
+      // Itera sobre as notícias fictícias e cria os elementos HTML
+      noticiasFicticias.forEach(noticia => {
         const box = document.createElement('div');
         box.classList.add('noticia-item');
   
@@ -35,7 +43,7 @@ async function carregarNoticias() {
       });
     } catch (erro) {
       container.innerHTML = '<p>Erro ao carregar notícias.</p>';
-      console.error('Erro ao buscar notícias:', erro);
+      console.error('Erro ao carregar as notícias fictícias:', erro);
     }
   }
   
