@@ -422,7 +422,7 @@ section h2 {
 .btn-mais-valores {
     display: block;
     width: fit-content;
-    margin: 0.7rem auto 0.7rem auto; /* Ajuste para centralizar */
+    margin: 1rem auto 1rem auto; /* Ajuste para centralizar */
 }
 
 .card.noticias {
