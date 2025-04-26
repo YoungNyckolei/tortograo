@@ -417,11 +417,10 @@ section h2 {
     text-shadow: 1px 1px 2px #000000;
 }
 
-.mais-valores-link {
+.bnt-mais-valores {
     display: block;
     width: fit-content;
-    margin: 1rem auto 1rem auto;
-    margin-top: 1rem;
+    margin: 0.5rem auto 1rem auto;
 }
 
 .card.noticias {
