@@ -6,10 +6,10 @@ function gerarPrecoAleatorio(min, max) {
 // Função para obter dados simulados
 function obterDadosSimulados() {
     return {
-        trigo: gerarPrecoAleatorio(81, 83),
-        soja: gerarPrecoAleatorio(129, 132),
-        milho: gerarPrecoAleatorio(79, 82),
-        feijao: gerarPrecoAleatorio(250, 254)
+        trigo: gerarPrecoAleatorio(76, 79),
+        soja: gerarPrecoAleatorio(119, 123),
+        milho: gerarPrecoAleatorio(63, 66),
+        feijao: gerarPrecoAleatorio(190, 193)
     };
 }
 
@@ -34,4 +34,4 @@ function atualizarPrecos() {
 document.addEventListener('DOMContentLoaded', atualizarPrecos);
 
 // Atualiza os preços a cada 10 segundos
-setInterval(atualizarPrecos, 180000);
+setInterval(atualizarPrecos, 300000);
