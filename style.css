@@ -118,11 +118,12 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 6rem 2rem;
+    padding: 1rem 1rem;
     text-align: center;
     color: #ffffff;
     position: relative;
     min-height: 400px;
+    
 }
 
 .banner::before {
@@ -263,17 +264,18 @@ section h2 {
     padding: 2rem 2rem 4rem; /* Ajuste no padding inferior para mais espaçamento */
     position: relative;
     overflow: hidden;
+    font-size: 13px;
 }
 
 .card.cotacoes h3 {
     font-size: 2.5rem;
     color: #f6f6f6;
-    text-shadow: 1px 1px 2px #000000;
+    text-shadow: 2px 2px 3px #000000;
     -webkit-text-stroke: 0.5px #000000;
     margin-top: 0;
     margin-bottom: 1.5rem;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .precos-container {
@@ -428,7 +430,7 @@ section h2 {
 .card.noticias {
     background-color: #ffffff;
     border: 1px solid #ddd;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -442,18 +444,18 @@ section h2 {
 }
 
 .card.noticias h3 {
-    font-size: 2rem; /* Diminuímos o tamanho da fonte */
+    font-size: 1rem; /* Diminuímos o tamanho da fonte */
     color: #f6f6f6;
-    margin-bottom: 1rem;
-    padding-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
 }
 
 .noticias-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Reduzimos o tamanho mínimo */
-    gap: 1rem; /* Reduzimos o gap entre as caixas */
+    gap: 1.5rem; /* Reduzimos o gap entre as caixas */
     width: 100%;
-    margin-top: 5px;
+    margin-top: 1px;
     box-sizing: border-box;
 }
 
@@ -472,13 +474,13 @@ section h2 {
 }
 
 .noticia-item h4 {
-    font-size: 1.8rem; /* Reduzimos o tamanho da fonte do título */
+    font-size: 1.4rem; /* Reduzimos o tamanho da fonte do título */
     color: #2d5014;
     margin-bottom: 1rem; /* Menor espaço abaixo do título */
 }
 
 .noticia-item p {
-    font-size: 1.4rem; /* Diminuímos o tamanho da fonte da descrição */
+    font-size: 1rem; /* Diminuímos o tamanho da fonte da descrição */
     color: #371804;
     margin-bottom: 1rem; /* Menor distância abaixo da descrição */
 }

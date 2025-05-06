@@ -57,31 +57,48 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="card cotacoes">
                     <h3>Cotações do Dia</h3>
                     <div class="precos-container">
                         <div class="preco-item">
-                            <h4>Trigo</h4>
-                            <p id="preco-trigo">...</p>
-                        </div>
-                        <div class="preco-item">
                             <h4>Soja</h4>
-                            <p id="preco-soja">...</p>
+                            <div id="preco-soja" class="price-value loading">Carregando...</div>
+                            <div id="fonte-soja" class="price-source"></div>
                         </div>
+                        
                         <div class="preco-item">
                             <h4>Milho</h4>
-                            <p id="preco-milho">...</p>
+                            <div id="preco-milho" class="price-value loading">Carregando...</div>
+                            <div id="fonte-milho" class="price-source"></div>
+                        </div>
+                        <div class="preco-item">
+                            <h4>Trigo</h4>
+                            <div id="preco-trigo" class="price-value loading">Carregando...</div>
+                            <div id="fonte-trigo" class="price-source"></div>
                         </div>
                         <div class="preco-item">
                             <h4>Feijão</h4>
-                            <p id="preco-feijao">...</p>
+                            <div id="preco-feijao" class="price-value loading">Carregando...</div>
+                            <div id="fonte-feijao" class="price-source"></div>
                         </div>
+                    </div>
+                    <script src="cotacoes.js"></script>
+                
+               
+                      </div>
+                      
+                      <p id="atualizacao" class="update-info">Atualizando dados...</p>
+                    
+                      <!-- Load scripts -->
+                     
+                     
                     </div>
                     
                     <!-- Estes dois elementos ficam fora do .precos-container -->
+                     <div>
                     <div class="aviso-simulacao">*valores simulados</div>
                     <a href="https://www.agrolink.com.br/cotacoes/" class="btn-mais-valores">Mais valores</a>
+                    </div>
                 </div>
                 
                 
